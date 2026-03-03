@@ -7,24 +7,28 @@ def Rechnung(seite_a, seite_b):
 
     return fläche
 
+print("Anzahl Räume?")
+anzahl_raeume = int(input())
 
-raum = input("Bezeichnung Raum: ")
-gwert_a = int(input("Wert 1: "))
-gwert_b = int(input("Wert 2: "))
+for i in range(0, anzahl_raeume):
+    i = i+1
+    raum = input("Bezeichnung Raum: ")
+    gwert_a = int(input("Wert 1: "))
+    gwert_b = int(input("Wert 2: "))
 
-fläche_raum = Rechnung(gwert_a, gwert_b)
-print(Rechnung(gwert_a, gwert_b))
+    fläche_raum = Rechnung(gwert_a, gwert_b)
+    print(Rechnung(gwert_a, gwert_b))
 
-tuple_raum = (raum, fläche_raum)
-print(tuple_raum)
-print("Ist der Raum ein rechteck?(J)a / (N)ein")
+    tuple_raum = (raum, fläche_raum)
+    print(tuple_raum)
+    print("Ist der Raum ein rechteck?(J)a / (N)ein")
 
-antwort = input(" j oder n")
-if antwort == "j":
-    print("TOP")
-elif antwort == "n":
-    print("NEIN")
-    gwert_c = int(input("Wert 1: "))
-    gwert_d = int(input("Wert 2: "))
-    fläche_raum = fläche_raum - Rechnung(gwert_c, gwert_d)
-    print(fläche_raum)
+    antwort = input(" j oder n")
+    if antwort == "j":
+        print("TOP")
+    elif antwort == "n":
+        print("NEIN")
+        gwert_c = int(input("Wert 1: "))
+        gwert_d = int(input("Wert 2: "))
+        fläche_raum = fläche_raum - Rechnung(gwert_c, gwert_d)
+        print(fläche_raum)
